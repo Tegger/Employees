@@ -1,5 +1,6 @@
  public class Employee {
         private int ID;
+        private int shift;
         private String firstName;
         private String lastName;
         private String emailAddress;
@@ -7,14 +8,17 @@
         private String workPhone;
         private String cellPhone;
 
-        public Employee(int ID, String firstName, String lastName, String emailAddress, String homePhone, String workPhone, String cellPhone){
+
+        public Employee(int ID, int shift, String firstName, String lastName, String emailAddress, String homePhone, String workPhone, String cellPhone){
             this.ID = ID;
+            this.shift = shift;
             this.firstName = firstName;
             this.lastName = lastName;
             this.emailAddress = emailAddress;
             this.homePhone = homePhone;
             this.workPhone = workPhone;
             this.cellPhone = cellPhone;
+
         }
 
         public int getID(){
@@ -24,6 +28,14 @@
         public void setID(int ID){
             this.ID = ID;
         }
+
+         public int getShift(){
+            return shift;
+         }
+
+         public void setshift(int shift){
+            this.shift = shift;
+         }
 
         public String getFirstName(){
             return firstName;
@@ -76,9 +88,14 @@
         public void setCellPhone(String cellPhone){
             this.cellPhone = cellPhone;
         }
+
+
+
+
+
         public void printAll(){
-            System.out.println("ID Number: " + ID + "\nFirst Name: " + firstName + "\nLast Name" + lastName + "\n" + "\nEmail: " + emailAddress + "\nHome Phomne: "
-                    + homePhone + "\nWork Phone: " + workPhone + "\nCell Phone: " + cellPhone);
+            System.out.println("ID Number: " + ID + "\nWorking Shift: " + shift + "\nFirst Name: " + firstName + "\nLast Name" + lastName + "\n" + "\nEmail: " + emailAddress + "\nHome Phomne: "
+                    + homePhone + "\nWork Phone: " + workPhone + "\nCell Phone: " + cellPhone + "\n\n");
         }
 
 
